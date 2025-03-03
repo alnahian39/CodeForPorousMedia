@@ -1,0 +1,49 @@
+CT Image Analysis for Porosity and Calcite Calculation  
+======================================================  
+
+Overview:  
+This repository contains MATLAB scripts for analyzing CT images to determine porosity and calcite volume fraction. These scripts process a sequence of CT scan images to quantify pore space and mineral precipitation.  
+
+Files and Functionality:  
+
+1. **Porosity_Calculation.m**  
+   - Author: Abdullah Al Nahian (April 2022)  
+   - Purpose: Calculates porosity by analyzing CT scan images.  
+   - Function:  
+     - Loads a sequence of .tif images from a specified folder.  
+     - Identifies pores (black pixels) and grains (white pixels).  
+     - Computes porosity as the ratio of pore pixels to total pixels.  
+     - Creates a 3D matrix of the image data for further analysis.  
+   - Usage:  
+     - Update the `dirName` variable with the folder path containing CT images.  
+     - Run the script in MATLAB.  
+     - The calculated porosity value will be displayed.  
+
+2. **Calcite_Fraction_Calculation.m**  
+   - Author: Abdullah Al Nahian (December 2023)  
+   - Purpose: Determines the calcite volume fraction from CT images.  
+   - Function:  
+     - Loads .tif images from a given folder.  
+     - Identifies calcite pixels and separates them from pore space.  
+     - Computes calcite volume fraction for each image slice.  
+     - Saves results in `Calcitefraction.txt`, listing:  
+       - Slice number  
+       - Total pore pixels  
+       - Total calcite pixels  
+       - Calcite fraction (%)  
+   - Usage:  
+     - Update the folder path in `jpeg1 = dir('write_the_imagefile_location\*.tif');`.  
+     - Run the script in MATLAB.  
+     - The output file `Calcitefraction.txt` will contain the results.  
+
+Dependencies:  
+- MATLAB (Tested on R2021a and later)  
+
+Citation:  
+ 
+
+License:  
+ 
+
+Contact:  
+For questions or contributions, contact via GitHub Issues or email at azn0066@auburn.edu.  
